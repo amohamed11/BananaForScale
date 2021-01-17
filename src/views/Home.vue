@@ -1,6 +1,6 @@
 <template>
-  <div class="home columns">
-    <div class="is-four-fifths column">
+  <div class="home ">
+    <div class="is-full column">
       <image-input />
     </div>
     <div class="column">
@@ -30,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    cocoSsd.load().then(model => {
+    cocoSsd.load({ base: this.baseModel }).then(model => {
       this.model = model
     })
   },
@@ -38,7 +38,7 @@ export default {
     analyze() {
       const c = document.getElementsByTagName("canvas")[0]
       const ctx = c.getContext("2d")
-      this.model.detect(c).then(predictions => {
+      this.model.detect(c, 2, 0.2).then(predictions => {
         // Font options.
         const font = "16px sans-serif"
         ctx.font = font
