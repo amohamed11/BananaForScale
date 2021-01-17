@@ -1,22 +1,11 @@
-# Typescript + Express + Vuejs
-Boilerplate for Express + Vue.JS with Typescript
+# Banana for Scale
 
-If you need a similar boilerplate for Vue 3, Typescript and Composition api [check it here](https://github.com/elibolonur/ts-express-vue3)
+Measure things using a Banana for scale.  
+Banana for Scale is a hackathon project built for HackED 2021.  
+This app is entirely client sided and utilizes Vue with TypeScript for framework.  
+[Tensorflow.js's CocoSSD](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd) model is used for object detection.  
+The size of the detected banana is used to measure the dimensions of the desired object.
 
-Feel free to send PR :tada:
+`npm run serve` to run project in dev mode
 
-`npm run serve` to run both client & server project concurrently 
- 
-`npm run build` to build both client & server project to dist/
-
-#### If you want to run server & client separately 
- 
-`npm run dev:client` to run client project. 
- 
-`npm run dev:server` to run server project.  
-  
-  
-`npm run build:client` to build client project.  
- 
-`npm run build:server` to build server project. 
-
+`npm run build` to build project to `dist/`
