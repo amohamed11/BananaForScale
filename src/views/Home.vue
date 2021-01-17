@@ -1,12 +1,13 @@
 <template>
-  <div class="home ">
-    <div class="is-full column">
+  <div class="home">
+    <div class="is-full column" v-if="!isLoading">
       <image-input />
     </div>
-    <div class="column">
+    <div class="is-full column" v-if="!isLoading">
       <b-button v-on:click="analyze" type="is-primary">Analyze</b-button>
     </div>
     <canvas id="canvas" width="600" height="400"></canvas>
+    <b-loading :is-full-page="true" v-model="isLoading" :can-cancel="true"></b-loading>
   </div>
 </template>
 
@@ -25,13 +26,18 @@ export default {
   },
   data() {
     return {
+      isLoading: false,
       model: null,
       baseModel: "mobilenet_v2"
     }
   },
+  created() {
+    this.isLoading = true
+  },
   mounted() {
     cocoSsd.load({ base: this.baseModel }).then(model => {
       this.model = model
+      this.isLoading = false
     })
   },
   methods: {
