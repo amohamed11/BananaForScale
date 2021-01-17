@@ -24,18 +24,22 @@ import PictureInput from "vue-picture-input"
 
 export default {
   name: "image-input",
-  data() {
-    return {}
-  },
+  // props: {
+  //   cocoModel: Promise
+  // },
   components: {
     PictureInput
   },
   methods: {
-    onChange(image) {
-      console.log("New picture selected!")
+    async onChange(image) {
       if (image) {
-        console.log("Picture loaded.")
-        console.log(image)
+        // const model = await this.cocoModel
+        // console.log("Picture loaded.")
+
+        // model.dispose()
+        // modelPromise = cocoSsd.load({ base: image })
+        // console.log("Model updated.")
+
         this.$store.commit("SET_IMAGE", image)
       } else {
         console.log("FileReader API not supported: use the <form>, Luke!")

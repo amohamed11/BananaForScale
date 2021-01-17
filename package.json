@@ -1,5 +1,5 @@
 {
-  "name": "Banana for Scale",
+  "name": "banana-for-scale",
   "version": "1.0.0",
   "description": "Measure height using a Banana for scale.",
   "private": true,
@@ -14,6 +14,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.1",
+    "@tensorflow/tfjs": "^2.8.4",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "buefy": "^0.9.4",

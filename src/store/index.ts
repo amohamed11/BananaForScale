@@ -17,6 +17,11 @@ export default new Vuex.Store({
     image: null,
     analysis: null
   },
+  getters: {
+    loadedImage: state => {
+      return state.image
+    }
+  },
   mutations: {
     SET_IMAGE(state, image) {
       state.image = image
