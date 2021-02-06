@@ -1,0 +1,45 @@
+Slide 1
+hello everyone & good afternoon, I'm Anas and this Banana for Scale, 
+In short, Banana for Scale allows you to measure objects by using a Banana for scale.
+
+Inspiration & Motivation
+pretty simple as far as things go
+a. eliminate all ruler from this world, cause I always used to forgot to pack them.
+b. and internet memes.
+really, just vital issues.
+
+Solution
+for this project, I utilized Tensorflow.js' object detection which runs client-side
+1. to detect the banana & the object to be measured.
+2. then computed the difference between the mean size of a Banana & the image.
+3. then finally used this difference to approximate the dimensions of the desired object.
+
+Demo
+alright demo time.
+1. Banana & phone
+   Height is ~10cm which is about the size of Nokia brick phones
+   so that is relatively accurate. alright one more.
+2. Banana & dog 
+   from my short search, that seems to be in the ball park of the size of a small puppy.
+   but that says cat (huh), which segues prefectly into the next slide
+
+Problems
+- Bananas have weird shapes thanks to their arc, which combined with the angle can drastically 
+  affect the accurary of the measurement.
+- There is a more accurate measurement called Five Points measurement which accounts for this arc,
+  which involves a whole lot of calculation, and I failed Calculus 2 (pause), 
+  so first-order approximation will have to do for now.
+- Tensorflowjs is just horrible inaccurate, which is due to its limitation to run in browser, but (go next)
+
+
+Future Improvements
+
+References
+here are two papers that I were useful for this project:
+1. First, is where I got the mean dimensions for bananas.
+2. Second is where the aformentioned Five Points measurement is from.
+
+End 
+well that's it, 
+thank you everyone for your time, hope you learned something useful from this.
+any questions?
